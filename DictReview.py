@@ -83,9 +83,23 @@ def finding_average(given_list):
     total_sum = 0
     for items in given_list:
         total_sum = total_sum + items
-    average = total_sum/len(given_list)
+    average = total_sum / len(given_list)
     return average
 
 
 my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(finding_average(my_list))
+
+
+def counting_characters(given_str):
+    letters = {}
+    for x in given_str:
+        if x in letters:
+            letters[x] = letters.get(x) + 1
+        else:
+            letters[x] = 1
+    return letters
+
+
+print(counting_characters("Anvi Rastogi is here!!!"))
+print(counting_characters("gglllsssaaa"))
